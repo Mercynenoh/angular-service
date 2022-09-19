@@ -1,0 +1,41 @@
+.products{
+    display: flex;
+    gap:3%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.display{
+    border: 2px solid grey;
+    box-shadow: 10px 5px 5px purple;
+    border-radius: 5px;
+    width: 300px;
+    height:500px;
+    text-align: center;
+    margin: 5%;
+    gap:5%;
+}
+
+.form-group{
+    display:flex;
+    flex-direction: column;
+    margin:3%;
+    /* width: 150px; */
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+.button{
+  gap:5px;
+  display: flex;
+  justify-content: center;
+}
+button{
+  width:70px;
+  background-color:gold;
+  color:white;
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+
+}

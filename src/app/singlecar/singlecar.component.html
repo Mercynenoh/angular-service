@@ -1,0 +1,13 @@
+<div class="display" [ngStyle]="{backgroundColor:!car.Sold?'grey':''}"  >
+  <p>{{car.name}}</p>
+  <img src="{{car.url}}" height="250px" width="250px"/>
+  <p>Speed: {{car.speed}}KM/HR</p>
+  <p> Sold: {{car.Sold}}</p>
+  <div class="button">
+    <button >Update</button>
+    <button (>Delete</button>
+
+  </div>
+
+
+</div>

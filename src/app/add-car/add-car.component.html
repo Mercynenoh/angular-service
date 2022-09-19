@@ -1,0 +1,10 @@
+<div class="cars">
+
+    <label>Car model</label>
+    <input [(ngModel)]="car.name" id="name"/>
+    <label>Image</label>
+    <input type="text" [(ngModel)]="car.url"  id=""/>
+    <label>Speed</label>
+    <input type="number" [(ngModel)]="car.speed"  id=""/>
+    <button class="add" (click)="onAdd()" >{{update? 'Update':'Add'}} Car</button>
+</div>

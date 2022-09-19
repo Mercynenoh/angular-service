@@ -1,0 +1,35 @@
+<div [ngSwitch]="day">
+    <p *ngSwitchCase=1>Monday</p>
+    <p *ngSwitchCase=2>Tuesday</p>
+    <p *ngSwitchCase=3>Wednesday</p>
+    <p *ngSwitchCase=4>Thursday</p>
+    <p *ngSwitchCase=5>Friday</p>
+    <p *ngSwitchCase=6>Saturday</p>
+    <p *ngSwitchDefault>No day</p>
+
+</div>
+<div class="form-group">
+    <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="filter" id="listSearch">
+  </div>
+<div  class="products" *ngIf="car.length; else noProduct">
+<div *ngFor="let cars of car |searchfilter:filter; let i = index ">
+<div class="display" [ngStyle]="{backgroundColor:!cars.Sold?'grey':''}"  (click)="showone(i)">
+    <p>{{cars.name}}</p>
+    <img src="{{cars.url}}" height="250px" width="250px"/>
+    <p>Speed: {{cars.speed}}KM/HR</p>
+    <p> Sold: {{cars.Sold}}</p>
+    <div class="button">
+      <button (click)="onUpdate(i)" >Update</button>
+      <button (click)="onDelete(i)">Delete</button>
+
+    </div>
+
+
+</div>
+</div>
+</div>
+
+
+<ng-template #noProduct>
+<p>No Products Available</p>
+</ng-template>
